@@ -78,7 +78,7 @@ function charts(sample){
     var bar_data = [{
         x: samplevalues.slice(0, 10).reverse(),
         y: otuid.slice(0, 10).map(otuid=>`otuid${otuid}`).reverse(),
-        text: otulables.slice(0, 10).reverse(),
+        text: otulables.slice(0, 10),
         type:"bar",
         orientation:"h"
     }];
