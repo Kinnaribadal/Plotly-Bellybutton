@@ -1,3 +1,5 @@
+//function is loading data in dropdown menu
+
 function dropdown(){
     d3.json("samples.json").then((data) => {
         var sampleNames = data.names;
@@ -13,7 +15,7 @@ function dropdown(){
         charts(sampleData);
     });
 }
-
+// Define a function that will create metadata for given sample
 function metadata(sample){
     d3.json("samples.json").then((data) => {
     var sampleMetadata = data.metadata;
@@ -26,14 +28,16 @@ function metadata(sample){
     });
 });
 }
-
+//run the function
 dropdown();
 
+//for selected item display metadata and charts
 function optionChanged(newSample){
     metadata(newSample);
     charts(newSample);
 }
 
+//chart all the data
 function charts(sample){
     d3.json("samples.json").then((data) => {
     var sampleChart = data.samples;
