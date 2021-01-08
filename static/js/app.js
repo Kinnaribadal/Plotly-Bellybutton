@@ -54,7 +54,6 @@ function charts(sample){
     }];
     Plotly.newPlot("bubble", bubble_data);
     var bar_data = [{
-        text: otulables.slice(0, 10).reverse(),
         x: samplevalues.slice(0, 10).reverse(),
         y: otuid.slice(0, 10).map(otuid=>`otuid${otuid}`).reverse(),
         //text: otulables.slice(0, 10).reverse(),
@@ -62,5 +61,6 @@ function charts(sample){
         orientation:"h"
     }];
     Plotly.newPlot("bar", bar_data);
+    
 });
 }
