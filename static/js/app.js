@@ -19,6 +19,7 @@ function dropdown(){
 function metadata(sample){
     d3.json("samples.json").then((data) => {
     var sampleMetadata = data.metadata;
+    console.log(sampleMetadata);
     var filteredid = sampleMetadata.filter(object => object.id == sample);
     var result = filteredid[0];
     var displaymetadata = d3.select("#sample-metadata");
@@ -78,7 +79,7 @@ function charts(sample){
     var bar_data = [{
         x: samplevalues.slice(0, 10).reverse(),
         y: otuid.slice(0, 10).map(otuid=>`otuid${otuid}`).reverse(),
-        text: otulables.slice(0, 10),
+       // text: otulables.slice(0, 10).reverse(),
         type:"bar",
         orientation:"h"
     }];
