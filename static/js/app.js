@@ -56,7 +56,25 @@ function charts(sample){
             color: otuid
         }
     }];
-    Plotly.newPlot("bubble", bubble_data);
+    var layout = {
+        title: "Top 10 OTU",
+        yaxis:{
+            tickmode:"linear",
+        },
+        margin: {
+            l: 100,
+            r: 100,
+            t: 100,
+            b: 30
+        }
+    };
+      // set the layout for the bubble plot
+      var layout_2 = {
+        xaxis:{title: "OTU ID"},
+        height: 600,
+        width: 1000
+    };
+    Plotly.newPlot("bubble", bubble_data, layout_2);
     var bar_data = [{
         x: samplevalues.slice(0, 10).reverse(),
         y: otuid.slice(0, 10).map(otuid=>`otuid${otuid}`).reverse(),
@@ -64,7 +82,7 @@ function charts(sample){
         type:"bar",
         orientation:"h"
     }];
-    Plotly.newPlot("bar", bar_data);
+    Plotly.newPlot("bar", bar_data, layout);
     
 });
 }
