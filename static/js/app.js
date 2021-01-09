@@ -29,7 +29,7 @@ function metadata(sample){
     });
 });
 }
-//run the function
+//run the function to load the data
 dropdown();
 
 //for selected item display metadata and charts
