@@ -77,7 +77,7 @@ function charts(sample){
         height: 600,
         width: 1000
     };
-    //bubble chart
+    //bubble chart plotted
     Plotly.newPlot("bubble", bubble_data, layout_2);
     var bar_data = [{
         x: samplevalues.slice(0, 10).reverse(),
@@ -86,7 +86,7 @@ function charts(sample){
         type:"bar",
         orientation:"h"
     }];
-    //bar chart
+    //bar chart plotted
     Plotly.newPlot("bar", bar_data, layout);
     
 });
