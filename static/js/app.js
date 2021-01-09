@@ -57,6 +57,7 @@ function charts(sample){
             color: otuid
         }
     }];
+    //layout for bar chart
     var layout = {
         title: "Top 10 OTU",
         yaxis:{
