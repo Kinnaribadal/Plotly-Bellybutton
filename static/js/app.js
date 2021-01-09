@@ -75,6 +75,7 @@ function charts(sample){
         height: 600,
         width: 1000
     };
+    //bubble chart
     Plotly.newPlot("bubble", bubble_data, layout_2);
     var bar_data = [{
         x: samplevalues.slice(0, 10).reverse(),
