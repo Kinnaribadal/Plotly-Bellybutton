@@ -86,6 +86,7 @@ function charts(sample){
         type:"bar",
         orientation:"h"
     }];
+    //bar chart
     Plotly.newPlot("bar", bar_data, layout);
     
 });
